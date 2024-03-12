@@ -1,4 +1,4 @@
 # .gitignore file for 'learn-jest-17-6' repository
 # Ignore everything in 'node_modules' directory 
 
-node_modules/
+# node_modules/

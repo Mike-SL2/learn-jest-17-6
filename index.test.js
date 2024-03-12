@@ -16,6 +16,20 @@ describe ('проверка функции getMonthName',
         expect(getMonthName(0)).toBe(errorMessage);
      }),
 
+     it('ввод номера месяца null (corner - success)', () =>
+     {
+        expect(getMonthName(null)).toBe(errorMessage);
+     }),
+
+     it('ввод номера месяца 6abc7 (corner - success)', () =>
+     {
+        expect(getMonthName('6abc7')).toBe(errorMessage);
+     }),
+     it('пустой ввод номера месяца (undefined) (corner - success)', () =>
+     {
+        expect(getMonthName()).toBe(errorMessage);
+     }),
+     
      it ('номер месяца 3 (success)', () =>
      {
         expect(getMonthName(3)).toStrictEqual(normalOutput3);
